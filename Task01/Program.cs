@@ -28,26 +28,18 @@ void CheckCorrectInput(string input) //впечатлило, что с Try.Parse
     }
 }
 
-int GetNumN()
+int GetNum()
 {
     Console.WriteLine("Введите натуральное N, это должно быть число! Завершите ввод нажатием Enter...");
-    string? inputN = Console.ReadLine(); //знак впороса подавляет вывод предупреждений о пустом значении, подсмотрел в сети
-    CheckCorrectInput(inputN);
-    int numberN = int.Parse(inputN);
-    return numberN;
+    string? input = Console.ReadLine(); //знак впороса подавляет вывод предупреждений о пустом значении, подсмотрел в сети
+    CheckCorrectInput(input);
+    int number = int.Parse(input);
+    return number;
 }
 
-int GetNumM()
-{
-    Console.WriteLine("Введите натуральное M, это должно быть число! Завершите ввод нажатием Enter...");
-    string? inputM = Console.ReadLine();
-    CheckCorrectInput(inputM);
-    int numberM = int.Parse(inputM);
-    return numberM;
-}
 
-int numberN = GetNumN();
-int numberM = GetNumM();
+int numberN = GetNum();
+int numberM = GetNum();
 
 ShowNumbersFromNtoM(numberN, numberM);
 Console.Write(numberM); //по условию задачи необходимо вывести весь диапазон между N и M, эта строка добавляет значение M в конец строки
