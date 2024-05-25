@@ -35,17 +35,17 @@ int GetNumN()
     return numberN;
 }
 
-int GetNumM()
+int GetNum()
 {
-    Console.WriteLine("Введите натуральное M, это должно быть число! Завершите ввод нажатием Enter...");
-    string? inputM = Console.ReadLine();
-    CheckCorrectInput(inputM);
-    int numberM = int.Parse(inputM);
-    return numberM;
+    Console.WriteLine("Введите натуральное N, это должно быть число! Завершите ввод нажатием Enter...");
+    string? input = Console.ReadLine(); //знак впороса подавляет вывод предупреждений о пустом значении, подсмотрел в сети
+    CheckCorrectInput(input);
+    int number = int.Parse(input);
+    return number;
 }
 
-int numberN = GetNumN();
-int numberM = GetNumM();
+int numberN = GetNum();
+int numberM = GetNum();
 
 int result = CalcAkkermanFunc(numberN, numberM);
 Console.WriteLine("Результат вычисления функции Аккермана: " + result);
